@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/banner-maker/static/css/main.9bf8675e.css",
+    "main.js": "/banner-maker/static/js/main.313249c6.js",
+    "static/js/787.3f1005ff.chunk.js": "/banner-maker/static/js/787.3f1005ff.chunk.js",
+    "index.html": "/banner-maker/index.html",
+    "main.9bf8675e.css.map": "/banner-maker/static/css/main.9bf8675e.css.map",
+    "main.313249c6.js.map": "/banner-maker/static/js/main.313249c6.js.map",
+    "787.3f1005ff.chunk.js.map": "/banner-maker/static/js/787.3f1005ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9bf8675e.css",
+    "static/js/main.313249c6.js"
+  ]
+}
