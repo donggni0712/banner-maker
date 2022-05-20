@@ -1,0 +1,41 @@
+.banner_box{
+    overflow: hidden;
+    display: table-cell;
+    background-color:red;
+    width : 700px;
+    height : 350px;
+    background-image: url();
+    color : white;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.input_box{
+    position: relative;
+    margin: 2rem;
+}
+
+.input_imgbutton{
+    margin: 1rem;
+}
+
+.textlabel{
+    position: relative;
+    left:30px;
+}
+
+.input_comment{
+    position: relative;
+    left:30px
+}
+
+.all{
+    position: absolute;
+    top:60%;
+    left: 50%;
+    height: 700px;
+    width: 700px;
+
+    margin:-350px 0px 0px -350px;
+}

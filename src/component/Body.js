@@ -1,9 +1,11 @@
 import {React, useState} from 'react';
+import './Banner.css'
 
-function Input(){
+function Body(){
     const [comment,setComment] = useState('');
-    const [imgsrc, setImgsrc] = useState('');
     const [imgtag, setImgtag] = useState('');
+    const banner = document.querySelector('.banner_box');
+
     const handleComment = (e) =>{
         setComment(e.target.value)
     }
@@ -12,21 +14,22 @@ function Input(){
         setImgtag(e.target.value)
     }
     const handleImgsrc = () =>{
-        fetch(`https://source.unsplash.com/featured/?${imgtag}`)
+        fetch(`https://source.unsplash.com/700x350/?${imgtag}`)
         .then((response)=>{
-            setImgsrc(response.url)
+            document.querySelector('.banner_box').style.backgroundImage = `url(${response.url})`
         })
     }
 
     return (
-        <div>
+        <div className='all'>
             <div className='banner_box'>
-                <p>{comment}</p>
-                <img src={imgsrc}/>
+                {comment}
             </div>
         <div className='input_box'>
+            <label>Image Tag : </label>
             <input className='input_imgtag' value={imgtag} onChange={handleImgtag}></input>
-            <button onClick={handleImgsrc}>이미지</button>
+            <button className='input_imgbutton' onClick={handleImgsrc}>이미지 생성</button>
+            <label className='textlabel'>Text : </label>
             <input className='input_comment' type='text' value={comment} onChange={handleComment} ></input>
         </div>
         </div>
@@ -36,4 +39,4 @@ function Input(){
 
 
 
-export default  Input
+export default Body
