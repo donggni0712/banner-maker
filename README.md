@@ -1,71 +1,15 @@
-# Getting Started with Create React App
+# Banner-Maker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+아는 사람은 알겠지만 이미 velog에서 나름 상용화되어있는 배너 생성기가 존재한다.
+[Banner Maker](https://velog.io/@godori/banner-maker)를 보면 제작 과정을 포함하여 편리하고 심플한 배너생성기가 이미 존재한다. 하지만 단색배경이나 랜덤한 이미지가 아닌 특정한 이미지를 활용해 시리즈물의 배너를 만들경우 활용할 수 없다는 단점이 존재하였고, 이 단점을 극복하기 위해 이 토이프로젝트를 구상하였다.
 
-## Available Scripts
+## Goals
+- [Banner Maker](https://velog.io/@godori/banner-maker)에서 구현되어 있는 기본적인 기능들을 사용할 수 있다.
+- 태그를 통해 이미지를 불러오고 저장할 수 있다.
+- 불러온 이미지가 마음에 들 경우 다음에 또 활용하기 위해 저장할 수 있다.
+- 내 컴퓨터에서 특정한 이미지를 배너의 배경으로 활용할 수 있다.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# banner-maker
+## Stack
+|<a href="https://ko.reactjs.org/"><img src = "./doc/img/react.png" height = 40px></a>|<a href="https://www.npmjs.com/"><img src = "./doc/img/npm.png" height = 25px></a>|<a href="https://nodejs.org/ko/https://nodejs.org/ko/"><img src="./doc/img/nodejs.png" height= 35px></a>|<a href="https://pages.github.com/"><img src="./doc/img/github.png" height=40px></a>|
+|:--:|:--:|:--:|:--:|
+|React|npm|Node Js|Github Page|
