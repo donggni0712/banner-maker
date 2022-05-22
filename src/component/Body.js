@@ -101,10 +101,12 @@ function Body(){
                 {comment}
             </div>
         <div className='input_box'>
-            <a onClick={handleMethod}>Tag</a>
-            <a onClick={handleMethod}>URL</a>
-            <a onClick={handleMethod}>Upload</a>
-            {imgview(methodForImg)}          
+            <div className='img_select'>
+            <a className='img_toggle' onClick={handleMethod}>Tag</a>
+            <a className='img_toggle' onClick={handleMethod}>URL</a>
+            <a className='img_toggle' onClick={handleMethod}>Upload</a>
+            {imgview(methodForImg)}  
+            </div>        
             <label className='textlabel'>Text : </label>
             <input className='input_comment' type='text' value={comment} onChange={handleComment} ></input>
         </div>

@@ -11,19 +11,17 @@
     vertical-align: middle;
 }
 
+.img_select{
+    border: 1px solid black;
+}
+
+.img_toggle{
+    border: 1px solid grey;
+}
+
 .input_box{
     position: relative;
     margin: 2rem;
-}
-
-.textlabel{
-    position: relative;
-    left:30px;
-}
-
-.input_comment{
-    position: relative;
-    left:30px
 }
 
 .all{
