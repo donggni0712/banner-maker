@@ -10,6 +10,10 @@
 - 내 컴퓨터에서 특정한 이미지를 배너의 배경으로 활용할 수 있다.
 
 ## Stack
+### Use Stack
 |<a href="https://ko.reactjs.org/"><img src = "./doc/img/react.png" height = 40px></a>|<a href="https://www.npmjs.com/"><img src = "./doc/img/npm.png" height = 25px></a>|<a href="https://nodejs.org/ko/https://nodejs.org/ko/"><img src="./doc/img/nodejs.png" height= 35px></a>|<a href="https://pages.github.com/"><img src="./doc/img/github.png" height=40px></a>|
 |:--:|:--:|:--:|:--:|
 |React|npm|Node Js|Github Page|
+
+## Development Note
+- 22.05.22 : effect, state를 이용한 이미지 업로드 기능 구현
