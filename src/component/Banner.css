@@ -16,6 +16,10 @@
     margin: 2rem;
 }
 
+.input_ImgUpload{
+    display:flex;
+}
+
 .input_imgbutton{
     margin: 1rem;
 }
