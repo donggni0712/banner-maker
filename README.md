@@ -16,4 +16,4 @@
 |React|npm|Node Js|Github Page|
 
 ## Development Note
-- 22.05.22 : effect, state를 이용한 이미지 업로드 기능 구현
+- 22.05.22 : effect, state를 이용한 이미지 업로드 기능, 글자 색, 배경색 설정 기능 구현
