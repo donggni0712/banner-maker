@@ -1,11 +1,20 @@
 import {React, useEffect, useState} from 'react';
 import './Banner.css';
-import axios from 'axios';
 
 function Body(){
     const [comment,setComment] = useState('');
     const [imgtag, setImgtag] = useState('');
     const [imgfile, setImgfile] = useState('');
+    const [imgurl, setImgurl] = useState('');
+
+    const handleImgurl = (e) =>{
+        setImgurl(e.target.value)
+    }
+
+    const handleurlButton = () =>{
+        handleImgsrc(imgurl);
+    }
+
     const handleComment = (e) =>{
         setComment(e.target.value)
     }
@@ -53,12 +62,16 @@ function Body(){
                 {comment}
             </div>
         <div className='input_box'>
-            <div>
+            <div className='input_upload'>
                 <input type='file' 
                     accept='image/jpg,image/png,image/jpeg,image/gif' 
                     name='profile_img' 
                     onChange={onLoadFile}>
                 </input>
+            </div>
+            <div>
+                <input className='input_ingurl' value={imgurl} onChange={handleImgurl}></input>
+                <button onClick={handleurlButton}>URL입력</button>
             </div>
             <label>Image Tag : </label>
             <input className='input_imgtag' value={imgtag} onChange={handleImgtag}></input>
