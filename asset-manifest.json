@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/banner-maker/static/css/main.9b6474c3.css",
-    "main.js": "/banner-maker/static/js/main.8bc097ed.js",
+    "main.css": "/banner-maker/static/css/main.141b2765.css",
+    "main.js": "/banner-maker/static/js/main.b1ff8d77.js",
     "static/js/787.3f1005ff.chunk.js": "/banner-maker/static/js/787.3f1005ff.chunk.js",
     "index.html": "/banner-maker/index.html",
-    "main.9b6474c3.css.map": "/banner-maker/static/css/main.9b6474c3.css.map",
-    "main.8bc097ed.js.map": "/banner-maker/static/js/main.8bc097ed.js.map",
+    "main.141b2765.css.map": "/banner-maker/static/css/main.141b2765.css.map",
+    "main.b1ff8d77.js.map": "/banner-maker/static/js/main.b1ff8d77.js.map",
     "787.3f1005ff.chunk.js.map": "/banner-maker/static/js/787.3f1005ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b6474c3.css",
-    "static/js/main.8bc097ed.js"
+    "static/css/main.141b2765.css",
+    "static/js/main.b1ff8d77.js"
   ]
 }
