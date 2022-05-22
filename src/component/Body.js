@@ -1,5 +1,7 @@
-import {React, useEffect, useState} from 'react';
+import {React, useEffect, useState, useRef} from 'react';
 import './Banner.css';
+import domtoimage from 'dom-to-image';
+import { saveAs } from 'file-saver';
 
 function Body(){
     const [comment,setComment] = useState('');
@@ -70,13 +72,21 @@ function Body(){
   
     }
 
+    const onDownloadBtn = () => {
+        const banner = document.querySelector('.banner_box')
+        domtoimage
+        .toBlob(banner)
+        .then((blob) => {
+            saveAs(blob, 'banner.png');
+        });
+    }
     function imgview(type){
         if(type==1){
             return  <div className='img_tag'>
             <label>Image Tag : </label>
             <input value={imgtag} onChange={handleImgtag}></input>
             <button onClick={handleTagButton}>이미지 생성</button>
-        </div>
+             </div>
         }
         if(type==2){
             return    <div className='img_url'>
@@ -106,9 +116,10 @@ function Body(){
             <a className='img_toggle' onClick={handleMethod}>URL</a>
             <a className='img_toggle' onClick={handleMethod}>Upload</a>
             {imgview(methodForImg)}  
-            </div>        
+            </div>
             <label className='textlabel'>Text : </label>
             <input className='input_comment' type='text' value={comment} onChange={handleComment} ></input>
+            <button onClick={onDownloadBtn}>다운로드</button>
         </div>
         </div>
 
@@ -116,4 +127,4 @@ function Body(){
 }
 
 
-export default Body
+export default Body;
