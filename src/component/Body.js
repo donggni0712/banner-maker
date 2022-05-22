@@ -6,6 +6,19 @@ function Body(){
     const [imgtag, setImgtag] = useState('');
     const [imgfile, setImgfile] = useState('');
     const [imgurl, setImgurl] = useState('');
+    const [methodForImg, setMethodForImg] = useState(1);//1=tag 2=url 3=file
+
+    const handleMethod = (e) =>{
+        if(e.target.textContent=='Tag'){
+            setMethodForImg(1);
+        }
+        if(e.target.textContent=='URL'){
+            setMethodForImg(2);
+        }
+        if(e.target.textContent=='Upload'){
+            setMethodForImg(3);
+        }
+    }
 
     const handleImgurl = (e) =>{
         setImgurl(e.target.value)
@@ -38,7 +51,7 @@ function Body(){
 
         return () => preview();
     });
-
+    
     const preview = () =>{
         if(!imgfile) return false;
 
@@ -56,26 +69,42 @@ function Body(){
         document.querySelector('.banner_box').style.backgroundImage = `url(${src})`
   
     }
+
+    function imgview(type){
+        if(type==1){
+            return  <div className='img_tag'>
+            <label>Image Tag : </label>
+            <input value={imgtag} onChange={handleImgtag}></input>
+            <button onClick={handleTagButton}>이미지 생성</button>
+        </div>
+        }
+        if(type==2){
+            return    <div className='img_url'>
+            <input value={imgurl} onChange={handleImgurl}></input>
+            <button onClick={handleurlButton}>URL입력</button>
+        </div>
+        }
+        if(type==3){
+            return    <div className='img_upload'>
+            <input type='file' 
+                accept='image/jpg,image/png,image/jpeg,image/gif' 
+                name='profile_img' 
+                onChange={onLoadFile}>
+            </input>
+        </div>
+        }
+    }
+
     return (
         <div className='all'>
             <div className='banner_box'>
                 {comment}
             </div>
         <div className='input_box'>
-            <div className='input_upload'>
-                <input type='file' 
-                    accept='image/jpg,image/png,image/jpeg,image/gif' 
-                    name='profile_img' 
-                    onChange={onLoadFile}>
-                </input>
-            </div>
-            <div>
-                <input className='input_ingurl' value={imgurl} onChange={handleImgurl}></input>
-                <button onClick={handleurlButton}>URL입력</button>
-            </div>
-            <label>Image Tag : </label>
-            <input className='input_imgtag' value={imgtag} onChange={handleImgtag}></input>
-            <button className='input_imgbutton' onClick={handleTagButton}>이미지 생성</button>
+            <a onClick={handleMethod}>Tag</a>
+            <a onClick={handleMethod}>URL</a>
+            <a onClick={handleMethod}>Upload</a>
+            {imgview(methodForImg)}          
             <label className='textlabel'>Text : </label>
             <input className='input_comment' type='text' value={comment} onChange={handleComment} ></input>
         </div>
@@ -83,7 +112,6 @@ function Body(){
 
     )
 }
-
 
 
 export default Body
