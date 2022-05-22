@@ -2,6 +2,8 @@ import {React, useEffect, useState, useRef} from 'react';
 import './Banner.css';
 import domtoimage from 'dom-to-image';
 import { saveAs } from 'file-saver';
+import CustomPicker  from './ColorPicker'
+
 
 function Body(){
     const [comment,setComment] = useState('');
@@ -9,7 +11,21 @@ function Body(){
     const [imgfile, setImgfile] = useState('');
     const [imgurl, setImgurl] = useState('');
     const [methodForImg, setMethodForImg] = useState(1);//1=tag 2=url 3=file
+    const [fontcolor, setFontcolor] = useState('');
+    const [backgroundcolor, setBackgroundcolor] = useState('');
 
+    const handleBackgroundColor = (color) =>{
+        setBackgroundcolor(color)
+        handleImgsrc("");
+        document.querySelector('.banner_box').style.backgroundColor = backgroundcolor;
+    }
+
+    const handleColorChange = (color) =>{
+        setFontcolor(color)
+        document.querySelector('.banner_box').style.color = fontcolor;
+    }
+
+    
     const handleMethod = (e) =>{
         if(e.target.textContent=='Tag'){
             setMethodForImg(1);
@@ -19,6 +35,9 @@ function Body(){
         }
         if(e.target.textContent=='Upload'){
             setMethodForImg(3);
+        }
+        if(e.target.textContent=='Color'){
+            setMethodForImg(4);
         }
     }
 
@@ -103,6 +122,11 @@ function Body(){
             </input>
         </div>
         }
+        if(type==4){
+            return <div className='img_color'>
+                <CustomPicker color={backgroundcolor} onChange={color => handleBackgroundColor(color.hex)}/>
+            </div>
+        }
     }
 
     return (
@@ -115,10 +139,17 @@ function Body(){
             <a className='img_toggle' onClick={handleMethod}>Tag</a>
             <a className='img_toggle' onClick={handleMethod}>URL</a>
             <a className='img_toggle' onClick={handleMethod}>Upload</a>
+            <a className='img_toggle' onClick={handleMethod}>Color</a>
             {imgview(methodForImg)}  
             </div>
-            <label className='textlabel'>Text : </label>
-            <input className='input_comment' type='text' value={comment} onChange={handleComment} ></input>
+            <div>
+                <label className='textlabel'>Text : </label>
+                <input className='input_comment' type='text' value={comment} onChange={handleComment} ></input>
+                <div className='font_color'>
+                <input value={fontcolor} onChange={e => handleColorChange(e.target.value)} /> 
+                <CustomPicker color={fontcolor} onChange={color => handleColorChange(color.hex)} />
+                </div>
+            </div>
             <button onClick={onDownloadBtn}>다운로드</button>
         </div>
         </div>
