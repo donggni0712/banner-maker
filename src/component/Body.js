@@ -4,7 +4,6 @@ import domtoimage from 'dom-to-image';
 import { saveAs } from 'file-saver';
 import CustomPicker  from './ColorPicker'
 
-
 function Body(){
     const [comment,setComment] = useState('');
     const [imgtag, setImgtag] = useState('');
@@ -13,6 +12,18 @@ function Body(){
     const [methodForImg, setMethodForImg] = useState(1);//1=tag 2=url 3=file
     const [fontcolor, setFontcolor] = useState('');
     const [backgroundcolor, setBackgroundcolor] = useState('');
+
+    const [font, setFont] = useState("NanumBarunGothic");
+    const fontLists = [
+        {name:"나눔바른고딕", id:"NanumBarunGothic"}, {name:"굵은 나눔바른고딕", id:"NanumBarunGothicBold"},
+    {name:"NotoSerif",id:"NotoSerifKR"}, {name:"NotoSerifBold", id:"NotoSerifKRBold"}, 
+    {name:"배민 다현체", id:"BMDOHYEON"}, {name:"배민 한나는 11살체",id:"BMHANNA_11yrs"}
+];
+    
+    const handleFont = (e) =>{
+        setFont(e.target.value);
+        document.querySelector('.banner_box').style.fontFamily= font;
+    }
 
     const handleBackgroundColor = (color) =>{
         setBackgroundcolor(color)
@@ -101,20 +112,20 @@ function Body(){
     }
     function imgview(type){
         if(type==1){
-            return  <div className='img_tag'>
+            return  <div className='img_tag img_option'>
             <label>Image Tag : </label>
             <input value={imgtag} onChange={handleImgtag}></input>
             <button onClick={handleTagButton}>이미지 생성</button>
              </div>
         }
         if(type==2){
-            return    <div className='img_url'>
+            return    <div className='img_url img_option'>
             <input value={imgurl} onChange={handleImgurl}></input>
             <button onClick={handleurlButton}>URL입력</button>
         </div>
         }
         if(type==3){
-            return    <div className='img_upload'>
+            return    <div className='img_upload img_option'>
             <input type='file' 
                 accept='image/jpg,image/png,image/jpeg,image/gif' 
                 name='profile_img' 
@@ -123,7 +134,7 @@ function Body(){
         </div>
         }
         if(type==4){
-            return <div className='img_color'>
+            return <div className='img_color img_option'>
                 <CustomPicker color={backgroundcolor} onChange={color => handleBackgroundColor(color.hex)}/>
             </div>
         }
@@ -136,17 +147,23 @@ function Body(){
             </div>
         <div className='input_box'>
             <div className='img_select'>
-            <a className='img_toggle' onClick={handleMethod}>Tag</a>
-            <a className='img_toggle' onClick={handleMethod}>URL</a>
-            <a className='img_toggle' onClick={handleMethod}>Upload</a>
-            <a className='img_toggle' onClick={handleMethod}>Color</a>
-            {imgview(methodForImg)}  
+                <a className='img_toggle' onClick={handleMethod}>Tag</a>
+                <a className='img_toggle' onClick={handleMethod}>URL</a>
+                <a className='img_toggle' onClick={handleMethod}>Upload</a>
+                <a className='img_toggle' onClick={handleMethod}>Color</a>
+                {imgview(methodForImg)}  
             </div>
             <div>
                 <label className='textlabel'>Text : </label>
                 <input className='input_comment' type='text' value={comment} onChange={handleComment} ></input>
+                <select onChange={handleFont}>
+                    {
+                        fontLists.map((el)=>{
+                            return <option key={el.id} value={el.id}>{el.name}</option>
+                        })
+                    }
+                </select>
                 <div className='font_color'>
-                <input value={fontcolor} onChange={e => handleColorChange(e.target.value)} /> 
                 <CustomPicker color={fontcolor} onChange={color => handleColorChange(color.hex)} />
                 </div>
             </div>

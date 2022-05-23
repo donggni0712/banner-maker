@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "BMDOHYEON";
+    src: url("./BMDOHYEON.otf");
+  }
+@font-face {
+font-family: "BMHANNA_11yrs";
+src: url("./BMHANNA_11yrs.otf");
+}
+@font-face {
+font-family: "NanumBarunGothic";
+src: url("./NanumBarunGothic.otf");
+}
+@font-face {
+font-family: "NanumBarunGothicBold";
+src: url("./NanumBarunGothicBold.otf");
+}
+@font-face {
+font-family: "NotoSerifKR";
+src: url("./NotoSerifKR-Black.otf");
+}
+@font-face {
+font-family: "NotoSerifKRBold";
+src: url("./NotoSerifKR-Bold.otf");
+}
