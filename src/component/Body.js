@@ -107,7 +107,7 @@ function Body(){
         domtoimage
         .toBlob(banner)
         .then((blob) => {
-            saveAs(blob, 'banner.png');
+            saveAs(blob, `${comment}.png`);
         });
     }
     function imgview(type){
@@ -164,10 +164,11 @@ function Body(){
                     }
                 </select>
                 <div className='font_color'>
+                    <label>글자 색상</label>
                 <CustomPicker color={fontcolor} onChange={color => handleColorChange(color.hex)} />
                 </div>
             </div>
-            <button onClick={onDownloadBtn}>다운로드</button>
+            <button onClick={onDownloadBtn}>배너 다운로드</button>
         </div>
         </div>
 
