@@ -46,6 +46,7 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
      const onLoadFile = (e) =>{
         setImgfile(e.target.files[0]);
     }
+
   const handleBackgroundColor = (color) =>{
         _setImgColor(color)
         _setImgSrc("");
@@ -61,14 +62,43 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
     const preview = () =>{
         if(!imgfile) return false;
 
-        const imgEl = document.querySelector('.banner_box');
-
         const reader = new FileReader();
 
-        reader.onload = () =>
-        (imgEl.style.backgroundImage = `url(${reader.result})`);
+        reader.onload = (theFile) =>{
+            const image = new Image();
+            image.src = theFile.target.result;
+            var canvas = document.createElement("canvas");
+            var ctx = canvas.getContext("2d");
+
+            ctx.drawImage(image, 0, 0);
+
+            var MAX_WIDTH = 700;
+            var MAX_HEIGHT = 350;
+            var width = image.width;
+            var height = image.height;
+
+            if (width > height) {
+                if (width > MAX_WIDTH) {
+                    height *= MAX_WIDTH / width;
+                    width = MAX_WIDTH;
+                }
+            } else {
+                if (height > MAX_HEIGHT) {
+                    width *= MAX_HEIGHT / height;
+                    height = MAX_HEIGHT;
+                }
+            }
+            canvas.width = width;
+            canvas.height = height;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(image, 0, 0, width, height)
+            var dataurl = canvas.toDataURL("image/png");
+
+            _setImgSrc(dataurl)
+        }
 
         reader.readAsDataURL(imgfile);
+
     }
 
     function imgview(type){
