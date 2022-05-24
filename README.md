@@ -5,17 +5,26 @@
 https://donggni0712.github.io/banner-maker/
 
 ## Goals
+
 - [Banner Maker](https://velog.io/@godori/banner-maker)에서 구현되어 있는 기본적인 기능들을 사용할 수 있다.
 - 태그를 통해 이미지를 불러오고 저장할 수 있다.
 - 불러온 이미지가 마음에 들 경우 다음에 또 활용하기 위해 저장할 수 있다.
 - 내 컴퓨터에서 특정한 이미지를 배너의 배경으로 활용할 수 있다.
 
 ## Stack
+
 ### Use Stack
-|<a href="https://ko.reactjs.org/"><img src = "./doc/img/react.png" height = 40px></a>|<a href="https://www.npmjs.com/"><img src = "./doc/img/npm.png" height = 25px></a>|<a href="https://nodejs.org/ko/https://nodejs.org/ko/"><img src="./doc/img/nodejs.png" height= 35px></a>|<a href="https://pages.github.com/"><img src="./doc/img/github.png" height=40px></a>|
-|:--:|:--:|:--:|:--:|
-|React|npm|Node Js|Github Page|
+
+| <a href="https://ko.reactjs.org/"><img src = "./doc/img/react.png" height = 40px></a> | <a href="https://www.npmjs.com/"><img src = "./doc/img/npm.png" height = 25px></a> | <a href="https://nodejs.org/ko/https://nodejs.org/ko/"><img src="./doc/img/nodejs.png" height= 35px></a> | <a href="https://pages.github.com/"><img src="./doc/img/github.png" height=40px></a> |
+| :-----------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------: |
+|                                         React                                         |                                        npm                                         |                                                 Node Js                                                  |                                     Github Page                                      |
+
+## Todo
+
+- Figmaf를 이용해 디자인 후 코드 수정
 
 ## Development Note
+
 - 22.05.22 : 이미지 업로드 기능, 글자 색, 배경색 설정 기능 구현
 - 22.05.23 : 글자 폰트 변경 기능 구현
+- 22.05.24 : 하나의 js파일로 구성된 지저부한 코드 refactoring
