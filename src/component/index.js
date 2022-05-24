@@ -11,7 +11,7 @@ function Body(){
     const [font,setFont] = useState("BMHANNA_11yrs");
     const [text, setText] = useState("Text");
     const [fontColor, setFontColor] = useState("#FFFFFF");
-    const [imgSrc,setImgSrc] = useState("");
+    const [imgSrc,setImgSrc] = useState("../Const/loading.gif");
     const [imgColor, setImgColor] = useState("#5A8CBE");
 
     return (

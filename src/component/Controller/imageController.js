@@ -63,7 +63,8 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
         if(!imgfile) return false;
 
         const reader = new FileReader();
-
+        
+    
         reader.onload = (theFile) =>{
             const image = new Image();
             image.src = theFile.target.result;

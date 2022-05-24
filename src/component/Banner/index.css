@@ -5,7 +5,7 @@
     display: table-cell;
     width: 700px;
     height: 350px;
-    background-image: url('');
+    background-image: '../Const/loading.gif';
     color: white;
     font-size: 50px;
     text-align: center;

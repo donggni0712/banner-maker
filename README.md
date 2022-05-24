@@ -22,6 +22,7 @@ https://donggni0712.github.io/banner-maker/
 ## Todo
 
 - Figmaf를 이용해 디자인 후 코드 수정
+- UseEffect가 수시로 호출됨 => 과부하 위험. promise, then await등을 이용해 적절히 처리할 필요가 있음.
 
 ## Development Note
 

@@ -1,13 +1,15 @@
 import './index.css'
 
 const Banner = ({text, fontColor, font, imgSrc, imgColor}) => {
-    return  <div className='banner' style={{
+    let _imgSrc = (imgSrc=='../Const/loading.gif') ? "../Const/loading.gif" : `url(${imgSrc})`
+
+    return  (<div className='banner' style={{
         color : fontColor, 
         fontFamily : font, 
-        backgroundImage : `url(${imgSrc})`,
+        backgroundImage : _imgSrc,
         backgroundColor : imgColor}}>
                 {text} 
-            </div>
+            </div>)
 }
 
 export default Banner
