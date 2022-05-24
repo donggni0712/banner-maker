@@ -1,0 +1,24 @@
+.input_box{
+    position: relative;
+    margin: 2rem;
+}
+
+.all{
+    position: absolute;
+    top:60%;
+    left: 50%;
+    height: 1000px;
+    width: 700px;
+    margin:-350px 0px 0px -350px;
+}
+
+body{
+    background-color: #303030;
+    color:white
+}
+
+
+button, input, select{
+    color:white;
+    background-color: #404040;
+}

@@ -1,0 +1,13 @@
+@import url("../../font/Font.css");
+
+.banner {
+    overflow: hidden;
+    display: table-cell;
+    width: 700px;
+    height: 350px;
+    background-image: url('');
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+}

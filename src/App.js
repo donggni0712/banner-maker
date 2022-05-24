@@ -1,6 +1,6 @@
 
 import './App.css';
-import Body from './component/Body.js'
+import Body from './component/index.js'
 
 function App() {
 
