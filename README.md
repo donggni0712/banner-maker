@@ -3,8 +3,10 @@
 <img src="public/logo512.png">
 
 아는 사람은 알겠지만 이미 velog에서 나름 상용화되어있는 배너 생성기가 존재한다.
-[Banner Maker](https://velog.io/@godori/banner-maker) 를 보면 제작 과정을 포함하여 편리하고 심플한 배너생성기가 이미 존재한다. 하지만 단색배경이나 랜덤한 이미지가 아닌 특정한 이미지를 활용해 시리즈물의 배너를 만들경우 활용할 수 없다는 단점이 존재하였고, 이 단점을 극복하기 위해 이 토이프로젝트를 구상하였다.
-https://donggni0712.github.io/banner-maker/
+기존의 서비스를 보면 제작 과정을 포함하여 편리하고 심플한 배너생성기가 이미 존재한다. 하지만 단색배경이나 랜덤한 이미지가 아닌 특정한 이미지를 활용해 시리즈물의 배너를 만들경우 활용할 수 없다는 단점이 존재하였고, 이 단점을 극복하기 위해 이 토이프로젝트를 구상하였다.
+아래의 [DEMO START]버튼을 클릭해 결과물을 테스트해볼 수 있다.
+
+<a href="https://donggni0712.github.io/banner-maker/"><img src="https://img.shields.io/badge/demo START-000000?style=for-the-badge&logo=Github&logoColor=white"></a>
 
 ## Goals
 
@@ -30,6 +32,12 @@ https://donggni0712.github.io/banner-maker/
 |       글자 입력 및 폰트 선택        |          글자 색상 선택하기          |
 | :---------------------------------: | :----------------------------------: |
 | <img src="doc/Tools/Text_Font.gif"> | <img src="doc/Tools/Text_Color.gif"> |
+
+### Download
+
+| 맨 아래 다운로드 버튼 클릭으로 다운로드 가능   |
+| :--------------------------------------------- |
+| <img src="doc/Tools/Download.gif" width='50%'> |
 
 ## Stack
 
