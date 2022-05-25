@@ -1,8 +1,9 @@
 # Banner-Maker
 
 <img src="public/logo512.png">
+
 아는 사람은 알겠지만 이미 velog에서 나름 상용화되어있는 배너 생성기가 존재한다.
-[Banner Maker](https://velog.io/@godori/banner-maker)를 보면 제작 과정을 포함하여 편리하고 심플한 배너생성기가 이미 존재한다. 하지만 단색배경이나 랜덤한 이미지가 아닌 특정한 이미지를 활용해 시리즈물의 배너를 만들경우 활용할 수 없다는 단점이 존재하였고, 이 단점을 극복하기 위해 이 토이프로젝트를 구상하였다.
+[Banner Maker](https://velog.io/@godori/banner-maker) 를 보면 제작 과정을 포함하여 편리하고 심플한 배너생성기가 이미 존재한다. 하지만 단색배경이나 랜덤한 이미지가 아닌 특정한 이미지를 활용해 시리즈물의 배너를 만들경우 활용할 수 없다는 단점이 존재하였고, 이 단점을 극복하기 위해 이 토이프로젝트를 구상하였다.
 https://donggni0712.github.io/banner-maker/
 
 ## Goals
