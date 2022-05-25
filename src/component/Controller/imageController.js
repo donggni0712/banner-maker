@@ -112,7 +112,7 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
         }
         if(type==2){
             return    <div className='img_url img_option'>
-            <input value={imgurl} onChange={handleImgurl}></input>
+            <input className='urlInput' value={imgurl} onChange={handleImgurl}></input>
             <button onClick={handleURLButton}>URL입력</button>
         </div>
         }
