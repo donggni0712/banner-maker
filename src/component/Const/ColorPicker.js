@@ -5,6 +5,7 @@ import {
   Hue,
   Saturation
 } from "react-color/lib/components/common";
+import './Pallet.css';
 
 export const MyPicker = ({ hex, hsl, hsv, onChange }) => {
   const styles = {
@@ -32,7 +33,7 @@ export const MyPicker = ({ hex, hsl, hsv, onChange }) => {
     }
   };
   return (
-    <div>
+      <div className="inner">
       <div style={styles.hue}>
         <Hue hsl={hsl} onChange={onChange} />
       </div>
@@ -49,7 +50,7 @@ export const MyPicker = ({ hex, hsl, hsv, onChange }) => {
         />
         <div style={styles.swatch} />
       </div>
-    </div>
+      </div>
   );
 };
 

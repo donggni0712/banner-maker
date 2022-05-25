@@ -1,11 +1,14 @@
-.img_select {
-    border: 1px solid black;
-}
-
 .img_option {
     padding: 5%;
+        border: 1px solid grey;
 }
 
 .img_toggle {
     border: 1px solid grey;
+}
+
+.img_toggle{
+    margin-right: 1%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
 }

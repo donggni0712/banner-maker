@@ -1,6 +1,7 @@
-import CustomPicker from '../Const/ColorPicker.js';
+
 import Fonts from '../Const/Fonts.js'
 import './text.css'
+import Pallet from '../Const/Pallet.js'
 
 function TextArea({_setFont, _setText, _setFontColor, _font, _text, _fontColor}){
     const fontLists = Fonts;
@@ -29,7 +30,7 @@ function TextArea({_setFont, _setText, _setFontColor, _font, _text, _fontColor})
                 </select>
                 <div className='font_color'>
                     <label>글자 색상</label>
-                <CustomPicker color={_fontColor} onChange={color => handleFontColor(color.hex)} />
+                <Pallet _fontColor={_fontColor} handleFontColor={handleFontColor}/>
                 </div>
             </div>
 }

@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import CustomPicker from '../Const/ColorPicker';
+import Pallet from '../Const/Pallet';
 import './image.css'
 
 function ImageController({_setImgSrc, _setImgColor, _imgColor}){
@@ -127,16 +127,23 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
         }
         if(type==4){
             return <div className='img_color img_option'>
-                <CustomPicker color={_imgColor} onChange={color => handleBackgroundColor(color.hex)}/>
+                <Pallet _fontColor={_imgColor} handleFontColor={handleBackgroundColor}/>
             </div>
         }
     }
 
+    const controllOptionColor = (num) =>{
+        if(methodForImg==num){
+            return {backgroundColor:'#808080'};
+        }
+        return {};
+    }
+
     return    <div className='img_select'>
-                <a className='img_toggle' onClick={handleMethod}>Tag</a>
-                <a className='img_toggle' onClick={handleMethod}>URL</a>
-                <a className='img_toggle' onClick={handleMethod}>Upload</a>
-                <a className='img_toggle' onClick={handleMethod}>Color</a>
+                <a className='img_toggle' style={controllOptionColor(1)} onClick={handleMethod}>Tag</a>
+                <a className='img_toggle' style={controllOptionColor(2)} onClick={handleMethod}>URL</a>
+                <a className='img_toggle' style={controllOptionColor(3)} onClick={handleMethod}>Upload</a>
+                <a className='img_toggle' style={controllOptionColor(4)} onClick={handleMethod}>Color</a>
                 {imgview(methodForImg)}
             </div>
 }

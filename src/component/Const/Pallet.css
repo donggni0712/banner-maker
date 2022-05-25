@@ -1,0 +1,19 @@
+.choice{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin : 1%;
+}
+
+.Line{
+    display: flex;
+}
+
+.inner {
+    position: relative;
+    top: -110px;
+    height: 150px;
+    width: 200px;
+    padding:10px;
+    margin: auto;
+}
