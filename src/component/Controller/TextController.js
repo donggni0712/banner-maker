@@ -2,6 +2,7 @@
 import Fonts from '../Const/Fonts.js'
 import './text.css'
 import Pallet from '../Const/Pallet.js'
+import { Form,Card } from 'react-bootstrap';
 
 function TextArea({_setFont, _setText, _setFontColor, _font, _text, _fontColor}){
     const fontLists = Fonts;
@@ -19,19 +20,26 @@ function TextArea({_setFont, _setText, _setFontColor, _font, _text, _fontColor})
     }
     
     return  <div>
-                <label className='textlabel'>Text : </label>
-                <input className='input_text' type='text' value={_text} onChange={handleText} ></input>
-                <select onChange={handleFont}>
-                    {
+                <div className='text_box'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Control style={{height:"2.3rem",width:"20rem", marginRight:"1rem"}} type="text" value={_text} onChange={handleText} placeholder="Text" />
+                        </Form.Group>
+                        <Form.Select style={{height:"2.3rem", width:"13rem"}} onChange={handleFont} >
+                                 {
                         fontLists.map((el)=>{
                             return <option key={el.id} value={el.id}>{el.name}</option>
-                        })
-                    }
-                </select>
-                <div className='font_color'>
-                    <label>글자 색상</label>
-                <Pallet _fontColor={_fontColor} handleFontColor={handleFontColor}/>
+                            })
+                        }
+                     </Form.Select>
                 </div>
+                
+                <Card >
+                    <Card.Header>글자 색상</Card.Header>
+                    <Card.Body>
+                         <Pallet _fontColor={_fontColor} handleFontColor={handleFontColor}/>
+                    </Card.Body>
+                </Card>
+                
             </div>
 }
 

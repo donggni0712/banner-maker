@@ -1,27 +1,13 @@
 import {useState,useEffect} from 'react';
 import Pallet from '../Const/Pallet';
 import './image.css'
+import { Tabs,Tab,Form,Button } from 'react-bootstrap';
 
 function ImageController({_setImgSrc, _setImgColor, _imgColor}){
     const [imgtag, setImgtag] = useState('');
     const [imgfile, setImgfile] = useState('');
     const [imgurl, setImgurl] = useState('');
-    const [methodForImg, setMethodForImg] = useState(1);//1=tag 2=url 3=file
-
-    const handleMethod = (e) =>{
-        if(e.target.textContent=='Tag'){
-            setMethodForImg(1);
-        }
-        if(e.target.textContent=='URL'){
-            setMethodForImg(2);
-        }
-        if(e.target.textContent=='Upload'){
-            setMethodForImg(3);
-        }   
-        if(e.target.textContent=='Color'){
-            setMethodForImg(4);
-        }
-    }
+    const [key, setKey] = useState('Tag');
 
 
     const handleImgtag = (e) =>{
@@ -102,49 +88,51 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
 
     }
 
-    function imgview(type){
-        if(type==1){
-            return  <div className='img_tag img_option'>
-            <label>Image Tag : </label>
-            <input value={imgtag} onChange={handleImgtag}></input>
-            <button onClick={handleTagButton}>이미지 생성</button>
-             </div>
-        }
-        if(type==2){
-            return    <div className='img_url img_option'>
-            <input className='urlInput' value={imgurl} onChange={handleImgurl}></input>
-            <button onClick={handleURLButton}>URL입력</button>
-        </div>
-        }
-        if(type==3){
-            return    <div className='img_upload img_option'>
-            <input type='file' 
-                accept='image/jpg,image/png,image/jpeg,image/gif' 
-                name='profile_img' 
-                onChange={onLoadFile}>
-            </input>
-        </div>
-        }
-        if(type==4){
-            return <div className='img_color img_option'>
-                <Pallet _fontColor={_imgColor} handleFontColor={handleBackgroundColor}/>
-            </div>
-        }
-    }
-
-    const controllOptionColor = (num) =>{
-        if(methodForImg==num){
-            return {backgroundColor:'#808080'};
-        }
-        return {};
-    }
-
     return    <div className='img_select'>
-                <a className='img_toggle' style={controllOptionColor(1)} onClick={handleMethod}>Tag</a>
-                <a className='img_toggle' style={controllOptionColor(2)} onClick={handleMethod}>URL</a>
-                <a className='img_toggle' style={controllOptionColor(3)} onClick={handleMethod}>Upload</a>
-                <a className='img_toggle' style={controllOptionColor(4)} onClick={handleMethod}>Color</a>
-                {imgview(methodForImg)}
+                 <Tabs
+                    id="controlled-tab-example"
+                    activeKey={key}
+                    onSelect={(k) => setKey(k)}
+                    className="mb-3"
+                    >
+                    <Tab eventKey="Tag" title="Tag">
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Control type="text" value={imgtag} onChange={handleImgtag} placeholder="Image Tag" />
+                            <Form.Text className="text-muted">
+                             배너의 배경이미지로 선정하고 싶은 이미지태그를 입력하세요.(예: sky)<br/>
+                             여러 개의 태그를 입력하고 싶은 경우 쉼표(,)로 구분하세요 (예: sky,dog)<br/>
+                            </Form.Text>
+                             <Button variant="primary" onClick={handleTagButton}>
+                                이미지 생성
+                            </Button>
+                        </Form.Group>
+                    </Tab>
+                    <Tab eventKey="URL" title="URL">
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Control type="text" value={imgurl} onChange={handleImgurl} placeholder="Image URL" />
+                            <Form.Text className="text-muted">
+                              원하는 이미지의 URL을 입력하세요.<br/>
+                            </Form.Text>
+                             <Button variant="primary" onClick={handleURLButton}>
+                                이미지 생성
+                            </Button>
+                        </Form.Group>
+                    </Tab>
+                    <Tab eventKey="Upload" title="Upload">
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Control type='file' 
+                            accept='image/jpg,image/png,image/jpeg,image/gif' 
+                            name='profile_img' 
+                            onChange={onLoadFile} />
+                            <Form.Text className="text-muted">
+                              내 컴퓨터에서 원하는 이미지를 선택하세요.(.jpg .jpeg .png .gif 확장자만 사용가능합니다.)<br/>
+                            </Form.Text>
+                        </Form.Group>
+                    </Tab>
+                    <Tab eventKey="Color" title="Color">
+                        <Pallet _fontColor={_imgColor} handleFontColor={handleBackgroundColor}/>
+                    </Tab>
+                </Tabs>
             </div>
 }
 

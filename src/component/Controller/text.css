@@ -11,3 +11,7 @@
     margin-top: 2%;
     margin-right: 2%;
 }
+
+.text_box{
+    display: flex;
+}
