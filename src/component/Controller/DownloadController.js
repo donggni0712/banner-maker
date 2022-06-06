@@ -1,6 +1,6 @@
 import domtoimage from 'dom-to-image';
 import { saveAs } from 'file-saver';
-import './download.css'
+
 import { Button } from 'react-bootstrap';
 function Download({filename}){
 
@@ -13,7 +13,7 @@ function Download({filename}){
         });
     }
 
-    return  <div className='download_box'>
+    return  <div className='download_box' style={{textAlign:"center"}}>
          <Button variant="primary" style={{width:"15rem"}} onClick={onDownloadBtn}>
                                 배너 다운로드
         </Button>

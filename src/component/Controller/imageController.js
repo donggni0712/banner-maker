@@ -1,7 +1,7 @@
 import {useState,useEffect} from 'react';
 import Pallet from '../Const/Pallet';
-import './image.css'
-import { Tabs,Tab,Form,Button } from 'react-bootstrap';
+import { Tabs,Tab,Form,Button,Card } from 'react-bootstrap';
+import './Controller.css';
 
 function ImageController({_setImgSrc, _setImgColor, _imgColor}){
     const [imgtag, setImgtag] = useState('');
@@ -88,7 +88,8 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
 
     }
 
-    return    <div className='img_select'>
+    return    <Card className='Box'>
+                <Card.Header className='Header'>이미지</Card.Header>
                  <Tabs
                     id="controlled-tab-example"
                     activeKey={key}
@@ -133,7 +134,7 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
                         <Pallet _fontColor={_imgColor} handleFontColor={handleBackgroundColor}/>
                     </Tab>
                 </Tabs>
-            </div>
+            </Card>
 }
 
 export default ImageController;

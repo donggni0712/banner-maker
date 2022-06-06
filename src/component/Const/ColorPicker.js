@@ -11,25 +11,27 @@ export const MyPicker = ({ hex, hsl, hsv, onChange }) => {
   const styles = {
     hue: {
       height: 10,
-      width:200,
+      width:180,
       position: "relative",
       marginBottom: 10
     },
     saturation: {
-      width: 200,
+      width: 180,
       height: 180,
       position: "relative"
     },
     input: {
       height: 34,
-      width:136,
+      width:150,
       border: `1px solid ${hex}`,
-      paddingLeft: 10
+      paddingLeft: 10,
+      marginTop: "5px"
     },
     swatch: {
       width: 50,
-      height: 38,
-      background: hex
+      height: 34,
+      background: hex,
+      marginTop: "5px"
     }
   };
   return (
