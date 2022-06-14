@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/banner-maker/static/css/main.63488034.css",
-    "main.js": "/banner-maker/static/js/main.8127d319.js",
+    "main.css": "/banner-maker/static/css/main.b84e520b.css",
+    "main.js": "/banner-maker/static/js/main.55bbbc55.js",
     "static/js/787.3f1005ff.chunk.js": "/banner-maker/static/js/787.3f1005ff.chunk.js",
     "static/media/NotoSerifKR-Bold.otf": "/banner-maker/static/media/NotoSerifKR-Bold.07ab327aae2dd1d3cd71.otf",
     "static/media/NotoSerifKR-Black.otf": "/banner-maker/static/media/NotoSerifKR-Black.44a7ef2ec183d0bb3037.otf",
@@ -10,12 +10,12 @@
     "static/media/BMDOHYEON.otf": "/banner-maker/static/media/BMDOHYEON.48f23d8bc60a6d2bb96b.otf",
     "static/media/BMHANNA_11yrs.otf": "/banner-maker/static/media/BMHANNA_11yrs.23af5c356447b67445d9.otf",
     "index.html": "/banner-maker/index.html",
-    "main.63488034.css.map": "/banner-maker/static/css/main.63488034.css.map",
-    "main.8127d319.js.map": "/banner-maker/static/js/main.8127d319.js.map",
+    "main.b84e520b.css.map": "/banner-maker/static/css/main.b84e520b.css.map",
+    "main.55bbbc55.js.map": "/banner-maker/static/js/main.55bbbc55.js.map",
     "787.3f1005ff.chunk.js.map": "/banner-maker/static/js/787.3f1005ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63488034.css",
-    "static/js/main.8127d319.js"
+    "static/css/main.b84e520b.css",
+    "static/js/main.55bbbc55.js"
   ]
 }
