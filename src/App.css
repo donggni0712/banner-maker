@@ -1,0 +1,26 @@
+.App{
+    background-color: #323232;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    color:white;
+}
+
+.Header, .Tab, .mb-3{
+    background-color: #323232;
+    margin-bottom: 0rem!important;
+    border-color: #808080;
+}
+
+.card-body{
+    padding:1rem;
+    background-color: #323232;
+}
+
+.Box, .nav-item{
+    border-color: #808080;
+}
+
+.tab-content{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}

@@ -90,13 +90,14 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
 
     return    <Card className='Box'>
                 <Card.Header className='Header'>이미지</Card.Header>
+                <div className='card-body'>
                  <Tabs
                     id="controlled-tab-example"
                     activeKey={key}
                     onSelect={(k) => setKey(k)}
                     className="mb-3"
                     >
-                    <Tab eventKey="Tag" title="Tag">
+                    <Tab className='Tab' eventKey="Tag" title="Tag">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Control type="text" value={imgtag} onChange={handleImgtag} placeholder="Image Tag" />
                             <Form.Text className="text-muted">
@@ -108,7 +109,7 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
                             </Button>
                         </Form.Group>
                     </Tab>
-                    <Tab eventKey="URL" title="URL">
+                    <Tab className='Tab' eventKey="URL" title="URL">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Control type="text" value={imgurl} onChange={handleImgurl} placeholder="Image URL" />
                             <Form.Text className="text-muted">
@@ -119,7 +120,7 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
                             </Button>
                         </Form.Group>
                     </Tab>
-                    <Tab eventKey="Upload" title="Upload">
+                    <Tab className='Tab' eventKey="Upload" title="Upload">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Control type='file' 
                             accept='image/jpg,image/png,image/jpeg,image/gif' 
@@ -130,10 +131,11 @@ function ImageController({_setImgSrc, _setImgColor, _imgColor}){
                             </Form.Text>
                         </Form.Group>
                     </Tab>
-                    <Tab eventKey="Color" title="Color">
+                    <Tab className='Tab' eventKey="Color" title="Color">
                         <Pallet _fontColor={_imgColor} handleFontColor={handleBackgroundColor}/>
                     </Tab>
                 </Tabs>
+                </div>
             </Card>
 }
 

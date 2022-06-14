@@ -1,12 +1,12 @@
-import './App.css';
-import Body from './component/index.js'
+import Body from './Components/index.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
 
 
   return (
-    <div>
+    <div className='App'>
       <Body/>
     </div>
   );

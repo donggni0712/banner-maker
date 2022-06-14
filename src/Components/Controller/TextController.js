@@ -21,6 +21,8 @@ function TextArea({_setFont, _setText, _setFontColor, _font, _text, _fontColor})
     
     return  <Card className='Box'>
         <Card.Header className='Header'>텍스트</Card.Header>
+        
+                        <div className='card-body'>
         <div style={{display:'flex'}}>
                 <Form.Group className="mb-3" style={{margin:"10px"}}>
                     <Form.Control style={{height:"2.3rem",width:"20rem", marginRight:"1rem"}} type="text" value={_text} onChange={handleText} placeholder="Text" />
@@ -34,7 +36,7 @@ function TextArea({_setFont, _setText, _setFontColor, _font, _text, _fontColor})
                  </Form.Select>
                  </div>
                 <Pallet _fontColor={_fontColor} handleFontColor={handleFontColor}/>
-                
+              </div>  
             </Card>
 }
 

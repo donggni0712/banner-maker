@@ -1,8 +1,10 @@
-.Box{
+.Box    {
     margin-bottom: 5%;
+    background-color: #323232;
 }
 
 .Header{
     font-size: large;
     font-family: "BMHANNA_11yrs";
+    background-color: #323232;
 }

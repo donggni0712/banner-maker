@@ -12,8 +12,8 @@ function Pallet({_fontColor, handleFontColor}){
         handleFontColor(color);
     }
 
-    return <div>
-         <div className="Line" style={{marginTop : '50px'}}>
+    return <div style={{paddingTop : '80px', paddingLeft : '15px'}}>
+         <div className="Line">
              <div className="choice"style={Color('#F44336')} onClick={()=>clickColor('#F44336')}></div>
              <div className="choice"  style={Color('#E91E63')} onClick={()=>clickColor('#E91E63')}></div>
              <div className="choice" style={Color('#9C27B0')} onClick={()=>clickColor('#9C27B0')}></div>
